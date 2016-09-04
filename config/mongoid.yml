@@ -10,3 +10,10 @@ test:
       database: spotippos_test
       hosts:
         - mongo:27017
+
+ci:
+  clients:
+    default:
+      database: spotippos_ci
+      hosts:
+        - 127.0.0.1:27017
