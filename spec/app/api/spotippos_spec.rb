@@ -43,7 +43,7 @@ describe API::Spotippos do
       it { expect(body["beds"]).to eq 5 }
       it { expect(body["baths"]).to eq 2 }
       it { expect(body["squareMeters"]).to eq 100 }
-      it { expect(body["provinces"]).to include("Ruja") }
+      it { expect(body["provinces"]).to include("Scavy") }
       it { expect(body["_links"]["self"]["href"]).not_to be_empty }
     end
   end

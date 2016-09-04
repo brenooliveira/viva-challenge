@@ -17,5 +17,8 @@ module Entity
       self.where(:x.gte => ax).and(:x.lte => bx).and(:y.gte => ay).and(:y.lte => by).all
     end
 
+    def provinces
+      Province.find(self.x, self.y)
+    end
   end
 end

@@ -13,6 +13,7 @@ module API
       property :beds
       property :baths
       property :squareMeters
+      property :provinces
 
       link :self do |opts|
         request = Grape::Request.new(opts[:env])
