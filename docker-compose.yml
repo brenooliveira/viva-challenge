@@ -1,0 +1,23 @@
+version: '2'
+services:
+  viva-api:
+    build:
+      context: .
+      args:
+        BUNDLE_ARGS: ""
+    volumes:
+      - .:/viva-challenge
+    environment:
+      RACK_ENV: development
+      WEB_CONCURRENCY: 3
+      MAX_THREADS: 3
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+    links:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"

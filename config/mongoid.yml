@@ -1,0 +1,12 @@
+development:
+  clients:
+    default:
+      database: spotippos_dev
+      hosts:
+        - mongo:27017
+test:
+  clients:
+    default:
+      database: spotippos_test
+      hosts:
+        - mongo:27017
