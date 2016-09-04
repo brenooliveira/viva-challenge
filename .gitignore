@@ -1,0 +1,12 @@
+deploy.rb
+config/deploy_staging.rb
+config/deploy_production.rb
+.vagrant/
+log/
+cookbooks/
+tmp/
+.idea
+.env
+.DS_Store
+*.sqlite3
+coverage
