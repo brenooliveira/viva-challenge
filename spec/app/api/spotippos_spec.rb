@@ -43,8 +43,23 @@ describe API::Spotippos do
       it { expect(body["beds"]).to eq 5 }
       it { expect(body["baths"]).to eq 2 }
       it { expect(body["squareMeters"]).to eq 100 }
-      it { expect(body["provinces"]).to include "Ruja" }
+      it { expect(body["provinces"]).to include("Ruja") }
       it { expect(body["_links"]["self"]["href"]).not_to be_empty }
     end
+  end
+
+  describe "GET /properties?ax=200&ay=400&bx=250&ay=450" do
+    context "when found properties" do
+      before do
+        create :property
+        get "/v1/properties?ax=200&ay=400&bx=250&by=450"
+      end
+
+      let(:body) { JSON.parse last_response.body }
+
+      it { expect(last_response.status).to eq 200 }
+      it { expect(body['foundProperties']).to eq 1 }
+    end
+
   end
 end

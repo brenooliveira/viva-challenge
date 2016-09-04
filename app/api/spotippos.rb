@@ -55,6 +55,8 @@ module API
       end
       get do
         logger.info "GET /v1/properties Params: #{params}"
+        properties = Entity::Property.search(params[:ax], params[:ay], params[:bx], params[:by])
+        present properties, with: API::Representer::Properties
       end
     end
   end

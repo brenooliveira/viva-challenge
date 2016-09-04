@@ -19,9 +19,13 @@ Bundler.setup(:default, :test)
 
 require File.expand_path('../../boot', __FILE__)
 require 'rack/test'
-require 'vcr'
 require 'webmock'
 require 'factory_girl'
+
+if ENV['CODECLIMATE_REPO_TOKEN']
+  require "codeclimate-test-reporter"
+  CodeClimate::TestReporter.start
+end
 
 def app
   API::VivaChallenge

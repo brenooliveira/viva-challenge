@@ -13,8 +13,9 @@ module Entity
     field :baths, type: Integer
     field :squareMeters, type: Integer
 
-    # def search(params = {})
-    # end
+    def self.search(ax, ay, bx, by)
+      self.where(:x.gte => ax).and(:x.lte => bx).and(:y.gte => ay).and(:y.lte => by).all
+    end
 
   end
 end
