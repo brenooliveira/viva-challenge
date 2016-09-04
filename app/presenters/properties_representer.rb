@@ -9,7 +9,7 @@ module API
       collection :to_a, extend: API::Representer::Property, as: :properties#, embedded: true
 
       def foundProperties
-        1# properties.size
+        self.count
       end
 
     end
