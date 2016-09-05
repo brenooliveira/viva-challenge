@@ -3,7 +3,19 @@
 [![Code Climate](https://codeclimate.com/github/brenooliveira/viva-challenge/badges/gpa.svg)](https://codeclimate.com/github/brenooliveira/viva-challenge)
 [![Test Coverage](https://codeclimate.com/github/brenooliveira/viva-challenge/badges/coverage.svg)](https://codeclimate.com/github/brenooliveira/viva-challenge/coverage)
 
-Dasafio [Viva Real Spotippos](https://github.com/VivaReal/code-challenge)
+Dasafio [Viva Real Spotippos](https://github.com/VivaReal/code-challenge) por [Breno Oliveira](http://github.com/brenooliveira).
+
+## Tecnologias
+ - Ruby (2.3.0)
+  - grape
+  - rack
+  - mongoid
+  - swagger
+
+- MongoDB
+- Docker
+- Docker Compose
+
 
 ## Deploy on Heroku
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/brenooliveira/viva-challenge)
@@ -46,4 +58,9 @@ curl -k -v -XGET http://localhost:5000/v1/properties/1
 #### Buscando
 ```shell
 curl -k -v -XGET http://localhost:5000/v1/properties?ax=200&ay=400&bx=250&by=450
+```
+
+## Swagger JSON
+```
+http://localhost:5000/swagger_doc
 ```
