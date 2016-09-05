@@ -1,6 +1,5 @@
 require 'bundler'
 require 'rack'
-require 'rack/test'
 require 'bundler/setup'
 require 'rubygems'
 require 'erb'
