@@ -21,6 +21,4 @@ ci:
 production:
   clients:
     default:
-      database: spotippos
-      hosts:
-        - <%= ENV['MONGODB_URI'] %>
+      uri: <%= ENV['MONGODB_URI'] %>
