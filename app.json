@@ -1,0 +1,6 @@
+{
+  "name": "Viva Challenge by Breno Oliveira",
+  "description": "Desafio Viva Real Spotippos.",
+  "website": "https://github.com/brenooliveira/viva-challenge",
+  "addons": ["mongolab:sandbox"]
+}
