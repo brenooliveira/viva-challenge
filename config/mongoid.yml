@@ -17,3 +17,10 @@ ci:
       database: spotippos_ci
       hosts:
         - 127.0.0.1:27017
+
+production:
+  clients:
+    default:
+      database: spotippos
+      hosts:
+        - <%= MONGODB_URI %>
