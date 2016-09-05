@@ -48,7 +48,7 @@ describe API::Spotippos do
     end
   end
 
-  describe "GET /properties?ax=200&ay=400&bx=250&ay=450" do
+  describe "GET /properties?ax=200&ay=400&bx=250&by=450" do
     context "when found properties" do
       before do
         create :property

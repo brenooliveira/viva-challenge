@@ -24,3 +24,26 @@ docker-compose run viva-api bundle exec rspec
 ```
 
 ## Executando cUrl
+
+#### Criando uma nova propriedade
+```shell
+curl -k -v -X POST http://localhost:5000/v1/properties -d '{
+  "x": 222,
+  "y": 444,
+  "title": "Imóvel código 1, com 5 quartos e 4 banheiros",
+  "price": 1250000,
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  "beds": 4,
+  "baths": 3,
+  "squareMeters": 210
+}' -H "Content-Type: application/json"
+```
+#### Consultando
+```shell
+curl -k -v -XGET http://localhost:5000/v1/properties/1
+```
+
+#### Buscando
+```shell
+curl -k -v -XGET http://localhost:5000/v1/properties?ax=200&ay=400&bx=250&by=450
+```

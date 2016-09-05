@@ -2,5 +2,5 @@
   "name": "Viva Challenge",
   "description": "Desafio Viva Real Spotippos.",
   "website": "https://github.com/brenooliveira/viva-challenge",
-  "addons": ["mongolab:sandbox"]
+  "addons": ["mongolab:sandbox", "papertrail:choklad"]
 }

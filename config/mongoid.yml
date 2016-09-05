@@ -23,4 +23,4 @@ production:
     default:
       database: spotippos
       hosts:
-        - <%= MONGODB_URI %>
+        - <%= ENV['MONGODB_URI'] %>
